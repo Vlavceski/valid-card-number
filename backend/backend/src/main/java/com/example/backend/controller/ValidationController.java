@@ -109,12 +109,9 @@ public class ValidationController {
 
             if (doubleDigit) {
                 digit *= 2;
-                if (digit > 9) {
-                    digit -= 9;
-                }
             }
-
-            sum += digit;
+            sum += digit / 10;
+            sum += digit % 10;
             doubleDigit = !doubleDigit;
         }
 
